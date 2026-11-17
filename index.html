@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="assets/fonts.css">
   <link rel="stylesheet" href="assets/style.css">
   <script src="assets/lang.js"></script>
+  <script src="assets/slider.js" defer></script>
 </head>
 <body>
 
@@ -57,7 +58,19 @@
 
       <div class="games">
         <article class="game">
-          <div class="shot"><img src="assets/games/robin-screen.png" alt="Robin the Hound — menu" loading="lazy"></div>
+          <div class="shot slider" data-slider>
+            <div class="slides" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Robin the Hound">
+              <img src="assets/games/robin/robin-1.png" alt="Robin the Hound — menu">
+              <img src="assets/games/robin/robin-2.png" alt="Robin the Hound — stanza sulla spiaggia" loading="lazy">
+              <img src="assets/games/robin/robin-3.png" alt="Robin the Hound — stanza nel bosco" loading="lazy">
+              <img src="assets/games/robin/robin-4.png" alt="Robin the Hound — stanza sulla neve" loading="lazy">
+              <img src="assets/games/robin/robin-5.png" alt="Robin the Hound — il gatto e la porta" loading="lazy">
+              <img src="assets/games/robin/robin-6.png" alt="Robin the Hound — stanza di notte in città" loading="lazy">
+            </div>
+            <button class="slide-btn prev" type="button" aria-label="Immagine precedente / Previous image">&#8249;</button>
+            <button class="slide-btn next" type="button" aria-label="Immagine successiva / Next image">&#8250;</button>
+            <div class="dots" aria-hidden="true"></div>
+          </div>
           <div class="body">
             <header>
               <img src="assets/games/robin-icon.png" alt="">
