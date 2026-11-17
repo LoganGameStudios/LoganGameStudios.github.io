@@ -30,7 +30,8 @@ Sito statico per GitHub Pages: nessuna compilazione, basta caricare i file.
 - `index.html`: pagina principale in italiano e inglese (pulsante IT/EN in alto; la prima volta usa la lingua del browser).
 - `privacy/robin-the-hound.html`: l'informativa di `ClaudeHood/PRIVACY.md`. Se cambi quella, aggiorna anche questa.
 - `privacy/sito.html`: privacy e cookie del sito (niente cookie, niente risorse di terzi: tienilo così o aggiorna la pagina).
-- `assets/style.css`: colori e stile (carta chiara con i verdi e l'ambra dell'Albero antico).
+- `assets/style.css`: colori e stile (carta chiara con i toni ruggine e ambra dell'Albero antico in autunno).
+  Le immagini del logo vengono da `LoganGameStudios-kit` (variante "Ruggine più chiaro", creata con `autunno-logo.js`).
 - `assets/fonts.css` e `assets/fonts/`: caratteri ospitati sul sito (licenze OFL incluse), al posto di Google Fonts.
 - `assets/slider.js`: slider delle schermate (frecce, puntini, dito, tastiera).
 - `assets/`: logo, avatar, anteprima per i link (`og.png`), icona del sito (`favicon.png`).
