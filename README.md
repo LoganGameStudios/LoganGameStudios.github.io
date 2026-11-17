@@ -29,9 +29,15 @@ Sito statico per GitHub Pages: nessuna compilazione, basta caricare i file.
 ## Cosa c'è
 - `index.html`: pagina principale in italiano e inglese (pulsante IT/EN in alto; la prima volta usa la lingua del browser).
 - `privacy/robin-the-hound.html`: l'informativa di `ClaudeHood/PRIVACY.md`. Se cambi quella, aggiorna anche questa.
-- `assets/style.css`: colori e stile (palette dell'Albero antico).
-- `assets/`: logo, avatar, immagine d'apertura (`hero.png`), anteprima per i link (`og.png`), icona del sito (`favicon.png`).
-- `assets/games/`: icone e schermate dei giochi.
+- `privacy/sito.html`: privacy e cookie del sito (niente cookie, niente risorse di terzi: tienilo così o aggiorna la pagina).
+- `assets/style.css`: colori e stile (carta chiara con i verdi e l'ambra dell'Albero antico).
+- `assets/fonts.css` e `assets/fonts/`: caratteri ospitati sul sito (licenze OFL incluse), al posto di Google Fonts.
+- `assets/slider.js`: slider delle schermate (frecce, puntini, dito, tastiera).
+- `assets/`: logo, avatar, anteprima per i link (`og.png`), icona del sito (`favicon.png`).
+- `assets/games/`: icone e schermate dei giochi; `assets/games/robin/` le schermate dello slider di Robin.
+
+**Cache:** GitHub Pages fa tenere i file in cache per 10 minuti. Quando cambi CSS o script, alza il numero `?v=` nei
+collegamenti di tutte le pagine (es. `style.css?v=2` → `?v=3`), così i visitatori scaricano subito la versione nuova.
 
 ## Da aggiungere più avanti
 - Quando Jusy Thornwood's Adventure esce: nella sua scheda cambia "In arrivo" in "Disponibile", aggiungi il pulsante
