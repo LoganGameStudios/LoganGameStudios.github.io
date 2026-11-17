@@ -12,10 +12,10 @@
   <meta name="theme-color" content="#f6f0e1">
   <link rel="icon" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/avatar.png">
-  <link rel="stylesheet" href="assets/fonts.css?v=3">
-  <link rel="stylesheet" href="assets/style.css?v=3">
-  <script src="assets/lang.js?v=3"></script>
-  <script src="assets/slider.js?v=3" defer></script>
+  <link rel="stylesheet" href="assets/fonts.css?v=4">
+  <link rel="stylesheet" href="assets/style.css?v=4">
+  <script src="assets/lang.js?v=4"></script>
+  <script src="assets/slider.js?v=4" defer></script>
 </head>
 <body>
 
@@ -99,7 +99,41 @@
         </article>
 
         <article class="game">
-          <div class="shot"><img src="assets/games/jusy-screen.png" alt="Jusy Thornwood's Adventure — Bosco di Spine" loading="lazy"></div>
+          <!-- schermate di Jusy: una serie per lingua, si vede quella della lingua scelta -->
+          <div class="shot slider wide" data-slider lang="it">
+            <div class="slides" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Jusy Thornwood's Adventure">
+              <img src="assets/games/jusy/it/00_menu.jpg" alt="Jusy Thornwood's Adventure — menu principale" loading="lazy">
+              <img src="assets/games/jusy/it/01_bosco_totem.jpg" alt="Bosco di Spine — Jusy davanti al totem" loading="lazy">
+              <img src="assets/games/jusy/it/02_bosco_ponte_magico.jpg" alt="Bosco di Spine — il ponte magico di rovi" loading="lazy">
+              <img src="assets/games/jusy/it/03_bosco_carica_totem.jpg" alt="Bosco di Spine — Jusy carica la magia del totem" loading="lazy">
+              <img src="assets/games/jusy/it/04_canyon_geco.jpg" alt="Canyon del vento — il geco" loading="lazy">
+              <img src="assets/games/jusy/it/05_boss_spirito_del_vento.jpg" alt="Boss — lo Spirito del Vento" loading="lazy">
+              <img src="assets/games/jusy/it/06_boss_turbine_di_foglie.jpg" alt="Boss — il turbine di foglie contro lo Spirito del Vento" loading="lazy">
+              <img src="assets/games/jusy/it/07_ghiaccio_dardo.jpg" alt="Regno di ghiaccio — il dardo di ghiaccio" loading="lazy">
+              <img src="assets/games/jusy/it/08_braci_ghiaccio_spegne_lava.jpg" alt="Valle delle braci — il ghiaccio spegne la lava" loading="lazy">
+              <img src="assets/games/jusy/it/09_foresta_fiammata.jpg" alt="Foresta antica — la fiammata" loading="lazy">
+            </div>
+            <button class="slide-btn prev" type="button" aria-label="Immagine precedente">&#8249;</button>
+            <button class="slide-btn next" type="button" aria-label="Immagine successiva">&#8250;</button>
+            <div class="dots" aria-hidden="true"></div>
+          </div>
+          <div class="shot slider wide" data-slider lang="en">
+            <div class="slides" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Jusy Thornwood's Adventure">
+              <img src="assets/games/jusy/en/00_menu.jpg" alt="Jusy Thornwood's Adventure — main menu" loading="lazy">
+              <img src="assets/games/jusy/en/01_forest_totem.jpg" alt="Thornwood — Jusy in front of the totem" loading="lazy">
+              <img src="assets/games/jusy/en/02_forest_magic_bridge.jpg" alt="Thornwood — the magic bramble bridge" loading="lazy">
+              <img src="assets/games/jusy/en/03_forest_totem_charge.jpg" alt="Thornwood — Jusy charges the totem's magic" loading="lazy">
+              <img src="assets/games/jusy/en/04_canyon_gecko.jpg" alt="Wind canyon — the gecko" loading="lazy">
+              <img src="assets/games/jusy/en/05_boss_wind_spirit.jpg" alt="Boss — the Wind Spirit" loading="lazy">
+              <img src="assets/games/jusy/en/06_boss_leaf_whirl.jpg" alt="Boss — the leaf whirl against the Wind Spirit" loading="lazy">
+              <img src="assets/games/jusy/en/07_ice_bolt.jpg" alt="Ice kingdom — the ice bolt" loading="lazy">
+              <img src="assets/games/jusy/en/08_embers_ice_vs_lava.jpg" alt="Ember valley — ice puts out the lava" loading="lazy">
+              <img src="assets/games/jusy/en/09_grove_fireball.jpg" alt="Ancient forest — the fireball" loading="lazy">
+            </div>
+            <button class="slide-btn prev" type="button" aria-label="Previous image">&#8249;</button>
+            <button class="slide-btn next" type="button" aria-label="Next image">&#8250;</button>
+            <div class="dots" aria-hidden="true"></div>
+          </div>
           <div class="body">
             <header>
               <img src="assets/games/jusy-icon.png" alt="">

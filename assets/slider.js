@@ -5,7 +5,8 @@ document.querySelectorAll('[data-slider]').forEach(function (slider) {
   var dotsBox = slider.querySelector('.dots');
   var dots = [];
 
-  function current() { return Math.round(track.scrollLeft / track.clientWidth); }
+  // la larghezza è 0 finché lo slider è nascosto (serie dell'altra lingua)
+  function current() { return track.clientWidth ? Math.round(track.scrollLeft / track.clientWidth) : 0; }
   function go(i) {
     var n = imgs.length;
     i = (i + n) % n; // dall'ultima si torna alla prima
@@ -30,6 +31,15 @@ document.querySelectorAll('[data-slider]').forEach(function (slider) {
     if (e.key === 'ArrowLeft') { e.preventDefault(); go(current() - 1); }
     if (e.key === 'ArrowRight') { e.preventDefault(); go(current() + 1); }
   });
-  window.addEventListener('resize', function () { track.scrollLeft = current() * track.clientWidth; });
+  // quando cambia la larghezza (finestra ridimensionata o slider che compare cambiando lingua)
+  // resta sull'immagine giusta e aggiorna i puntini
+  var shown = 0;
+  function realign() {
+    if (track.clientWidth) track.scrollLeft = shown * track.clientWidth;
+    mark();
+  }
+  track.addEventListener('scroll', function () { if (track.clientWidth) shown = current(); });
+  if ('ResizeObserver' in window) new ResizeObserver(realign).observe(track);
+  else window.addEventListener('resize', realign);
   mark();
 });
