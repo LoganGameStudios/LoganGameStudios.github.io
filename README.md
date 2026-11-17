@@ -1,4 +1,4 @@
-# Sito di LoganGames
+# Sito di LoganGameStudios
 
 Sito statico per GitHub Pages: nessuna compilazione, basta caricare i file.
 
