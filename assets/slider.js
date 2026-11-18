@@ -55,7 +55,8 @@ document.querySelectorAll('[data-slider]').forEach(function (slider) {
   function mark() {
     var c = current();
     dots.forEach(function (d, i) { d.classList.toggle('on', i === c); });
-    items.forEach(function (item, i) { if (item._reset && i !== c && track.clientWidth) item._reset(); });
+    // il video si ferma se si passa a un'altra immagine o se lo slider viene nascosto (cambio lingua)
+    items.forEach(function (item, i) { if (item._reset && (i !== c || !track.clientWidth)) item._reset(); });
   }
 
   slider.querySelector('.prev').addEventListener('click', function () { go(current() - 1); });

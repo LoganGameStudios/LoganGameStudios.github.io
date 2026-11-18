@@ -40,6 +40,9 @@ Sito statico per GitHub Pages: nessuna compilazione, basta caricare i file.
   - `jusy/it/` e `jusy/en/`: slider di Jusy, una serie per lingua (da
     `JusiThornWoodAdventure/ArtSource/screenshots_sito` e `.../en`, ridotte a 1600x900 JPEG).
     Il sito mostra la serie della lingua scelta.
+    In tutti e due gli slider la prima voce è il trailer `jusy/trailer.mp4` (solo in italiano), con anteprima `jusy/00_trailer.jpg`,
+    copiato da `JusiThornWoodAdventure/ArtSource/video/jusy_trailer_it_youtube.mp4`. Quando ci sarà il trailer in inglese,
+    mettilo come `jusy/trailer-en.mp4` e cambia `data-video` nello slider inglese.
 
 **Cache:** GitHub Pages fa tenere i file in cache per 10 minuti. Quando cambi CSS o script, alza il numero `?v=` nei
 collegamenti di tutte le pagine (es. `style.css?v=2` → `?v=3`), così i visitatori scaricano subito la versione nuova.
