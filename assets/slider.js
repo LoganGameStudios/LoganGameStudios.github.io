@@ -1,6 +1,6 @@
 // Slider delle schermate: frecce, puntini, scorrimento col dito e frecce della tastiera.
-// Una voce può essere un video di YouTube (.video[data-yt]): finché non si preme play si vede solo
-// l'anteprima ospitata sul sito, quindi il browser non contatta YouTube.
+// Una voce può essere un video ospitato sul sito (.video[data-video]): finché non si preme play si vede
+// solo l'anteprima e il file del video non viene scaricato.
 document.querySelectorAll('[data-slider]').forEach(function (slider) {
   var track = slider.querySelector('.slides');
   var items = Array.prototype.slice.call(track.children);
@@ -22,25 +22,33 @@ document.querySelectorAll('[data-slider]').forEach(function (slider) {
     dots.push(d);
   });
 
-  // video: al clic su play l'anteprima viene sostituita dal lettore (dominio youtube-nocookie)
+  // video: al clic su play l'anteprima lascia il posto al lettore del browser.
+  // L'anteprima resta dietro, sfocata, a riempire i lati (il riquadro è più largo del video).
   items.forEach(function (item) {
-    if (!item.hasAttribute('data-yt')) return;
-    var poster = item.innerHTML;
-    item.addEventListener('click', function (e) {
-      if (!e.target.closest('.play')) return;
-      var f = document.createElement('iframe');
-      f.src = 'https://www.youtube-nocookie.com/embed/' + item.getAttribute('data-yt') + '?autoplay=1&rel=0';
-      f.title = item.getAttribute('data-yt-title') || 'Video';
-      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
-      f.allowFullscreen = true;
-      f.referrerPolicy = 'strict-origin-when-cross-origin';
-      item.innerHTML = '';
-      item.appendChild(f);
+    if (!item.hasAttribute('data-video')) return;
+    var video = null;
+    item.querySelector('.play').addEventListener('click', function () {
+      video = document.createElement('video');
+      video.src = item.getAttribute('data-video');
+      video.poster = item.querySelector('img').getAttribute('src');
+      video.controls = true;
+      video.playsInline = true;
+      video.preload = 'auto';
+      item.appendChild(video);
       item.classList.add('playing');
+      var p = video.play();
+      if (p && p.catch) p.catch(function () {}); // se il browser blocca l'avvio, restano i comandi del lettore
+      video.focus();
     });
     // passando a un'altra immagine il video si ferma e torna l'anteprima
     item._reset = function () {
-      if (item.classList.contains('playing')) { item.innerHTML = poster; item.classList.remove('playing'); }
+      if (!video) return;
+      video.pause();
+      video.removeAttribute('src');
+      video.load();
+      video.remove();
+      video = null;
+      item.classList.remove('playing');
     };
   });
 
