@@ -29,14 +29,14 @@ Sito statico per GitHub Pages: nessuna compilazione, basta caricare i file.
 ## Cosa c'è
 - `index.html`: pagina principale in italiano e inglese (pulsante IT/EN in alto; la prima volta usa la lingua del browser).
 - `privacy/robin-the-hound.html`: l'informativa di `ClaudeHood/PRIVACY.md`. Se cambi quella, aggiorna anche questa.
-- `privacy/sito.html`: privacy e cookie del sito (niente cookie, niente risorse di terzi: tienilo così o aggiorna la pagina).
+- `privacy/sito.html`: privacy e cookie del sito (niente cookie, niente risorse di terzi caricate in automatico; il trailer di YouTube si carica solo al clic ed è descritto nella sezione "Video di YouTube": se aggiungi altri servizi esterni aggiorna la pagina).
 - `assets/style.css`: colori e stile (carta chiara con i toni ruggine e ambra dell'Albero antico in autunno).
   Le immagini del logo vengono da `LoganGameStudios-kit` (variante "Ruggine più chiaro", creata con `autunno-logo.js`).
 - `assets/fonts.css` e `assets/fonts/`: caratteri ospitati sul sito (licenze OFL incluse), al posto di Google Fonts.
-- `assets/slider.js`: slider delle schermate (frecce, puntini, dito, tastiera).
+- `assets/slider.js`: slider delle schermate (frecce, puntini, dito, tastiera). Una voce `<div class="video" data-yt="ID">` mostra l'anteprima e carica YouTube (youtube-nocookie) solo quando si preme play.
 - `assets/`: logo, avatar, anteprima per i link (`og.png`), icona del sito (`favicon.png`).
 - `assets/games/`: icone e schermate dei giochi.
-  - `robin/`: slider di Robin (da `ClaudeHood/Screenshots/sito`, ridotte a 1560x720 JPEG).
+  - `robin/`: slider di Robin; la prima voce è il trailer di YouTube (`LculJZsMR4U`), con anteprima `00_trailer.jpg` presa dal video `ClaudeHood/ArtSource/video/robin_trailer_en_upload.mp4`. Resto dello slider (da `ClaudeHood/Screenshots/sito`, ridotte a 1560x720 JPEG).
   - `jusy/it/` e `jusy/en/`: slider di Jusy, una serie per lingua (da
     `JusiThornWoodAdventure/ArtSource/screenshots_sito` e `.../en`, ridotte a 1600x900 JPEG).
     Il sito mostra la serie della lingua scelta.
