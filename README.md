@@ -34,6 +34,9 @@ Sito statico per GitHub Pages: nessuna compilazione, basta caricare i file.
   Le immagini del logo vengono da `LoganGameStudios-kit` (variante "Ruggine più chiaro", creata con `autunno-logo.js`).
 - `assets/fonts.css` e `assets/fonts/`: caratteri ospitati sul sito (licenze OFL incluse), al posto di Google Fonts.
 - `assets/slider.js`: slider delle schermate (frecce, puntini, dito, tastiera). Una voce `<div class="video" data-video="file.mp4">` mostra l'anteprima e scarica il video solo quando si preme play.
+- `assets/hero-1600.jpg` e `hero-960.jpg`: illustrazione in testa alla pagina (Robin e Jusy con l'albero antico del logo), fatta con ComfyUI
+  in locale (`comfy-hero.js`, scena H3-avventura seed 2024, poi `comfy-ritocco.js` per l'albero a sinistra; originale in
+  `LoganGameStudios-hero/H3-albero-logo-101.png`). Sul telefono viene tagliata più alta, centrata sui personaggi.
 - `assets/`: logo, avatar, anteprima per i link (`og.png`), icona del sito (`favicon.png`).
 - `assets/games/`: icone e schermate dei giochi.
   - `robin/`: slider di Robin; la prima voce è il trailer `trailer.mp4` (lo stesso caricato su YouTube, `LculJZsMR4U`, a cui porta il link "Guarda su YouTube"), con anteprima `00_trailer.jpg`, copiato da `ClaudeHood/ArtSource/video/robin_trailer_en_upload.mp4`. Resto dello slider (da `ClaudeHood/Screenshots/sito`, ridotte a 1560x720 JPEG).
