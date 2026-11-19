@@ -207,7 +207,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: 
 }
 @media (max-width: 560px) {
   /* sul telefono un taglio più alto, centrato su Robin e Jusy */
-  .hero-art { aspect-ratio: 4 / 3; object-position: 57% 50%; }
+  .hero-art { aspect-ratio: 4 / 3; object-position: 62% 50%; }
   .nav nav a:not(.lang) { display: none; }
   .game .body { padding: 22px; }
   section { padding: 56px 0; }
