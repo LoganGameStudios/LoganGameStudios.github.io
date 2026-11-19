@@ -25,6 +25,8 @@ Sito statico per GitHub Pages: nessuna compilazione, basta caricare i file.
   `https://logangamestudios.github.io/privacy/robin-the-hound.html`
 - Pagina di Robin sul Play Store, usata dal pulsante "Google Play":
   `https://play.google.com/store/apps/details?id=it.logangames.RobinTheHound`
+- Pagina dello studio su itch.io (pulsante nei contatti) e di Robin (pulsante nella sua scheda):
+  `https://logangamestudios.itch.io/` e `https://logangamestudios.itch.io/robin-the-hound`
 
 ## Cosa c'è
 - `index.html`: pagina principale in italiano e inglese (pulsante IT/EN in alto; la prima volta usa la lingua del browser).
